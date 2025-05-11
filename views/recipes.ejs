@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>All Recipes</h1>
+
+    <!-- 🔍 Search Bar -->
+    <form action="/recipes" method="GET">
+        <input type="text" name="search" placeholder="Search recipes..." value="<%= searchQuery %>">
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul>
+        <% recipes.forEach(recipe => { %>
+            <li>
+                <strong><%= recipe.RecipeName %></strong>  
+                (Protein: <%= recipe.Protein %>, Servings: <%= recipe.Servings %>)
+                <a href="/recipes/<%= recipe.RecipeID %>">View Recipe</a>
+            </li>
+        <% }); %>
+    </ul>
+    
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

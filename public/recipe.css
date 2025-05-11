@@ -1,0 +1,49 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Ingredient Container */
+.ingredient-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Ingredient Hover Box */
+.hover-box {
+    position: relative;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* ✅ Black Popup Box */
+.popup {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.95); /* Dark background for readability */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px; /* Bigger size to fit facts */
+    bottom: 40px; /* Moves it above the ingredient */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    white-space: normal; /* Allows text to wrap */
+    pointer-events: none; /* Prevents accidental interference */
+}
+
+/* ✅ Make sure it appears when hovering */
+.hover-box:hover .popup {
+    display: block;
+}
