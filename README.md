@@ -1,7 +1,7 @@
-🍽️ Ben Waldner's Favorite Recipes App
-This is a simple Node.js web application that lets users view and add favorite recipes. It uses Express.js, EJS for rendering, and MySQL as the database.
 
-🔧 Setup Instructions
+This is a simple web app that lets users view and add their recipes. It uses Express.js, EJS for rendering, and MySQL as the database.
+
+Setup Instructions
 1. Clone the Repository
 bash
 Copy
@@ -55,7 +55,6 @@ Edit
 node app.js
 Visit http://localhost:3000 in your browser.
 
-✅ Features
 Home page with navigation
 
 View all recipes
@@ -66,7 +65,7 @@ Add new recipes with multiple ingredients
 
 Basic search functionality
 
-📁 Project Structure
+Project Structure
 app.js – main server setup
 
 routes/ – route handlers for pages
@@ -77,7 +76,7 @@ public/ – CSS files
 
 Database/ – MySQL connection and SQL schema
 
-🙋‍♂️ Author
+Author
 Ben Waldner
-Trinity University, 2025
+
 
