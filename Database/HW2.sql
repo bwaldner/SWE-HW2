@@ -1,4 +1,4 @@
-CREATE DATABASE HW2;
+-- CREATE DATABASE HW2;
 USE HW2;
 
 CREATE TABLE Ingredients
@@ -37,7 +37,7 @@ VALUES
     ('Butter', 'Thickens the cheese sauce, add as needed'),
     ('Powdered Cheese', 'The main base of the cheese sauce'),
     ('Whole Milk', 'Adds creamy texture to cheese sauce, one quarter of a cup'),
-    ('Shredded Cheese', 'Adds variety to flavor of cheese, ad as needed'),
+    ('Shredded Cheese', 'Adds variety to flavor of cheese, add as needed'),
     ('Chicken Thigh', 'Soft cut of chicken soaked in BBQ sauce and cubed, then baked for 20 minutes at 400 degrees'),
     ('White Bread', 'Toast in the toaster'),
     ('Tuna', 'Shred tuna with fork'),
@@ -52,7 +52,7 @@ INSERT INTO Recipe (RecipeID, RecipeName, Protein, PrepTime, CookTime, Servings)
 VALUES 
     (1, 'BBQ Mac and Cheese', 'Chicken', 0.15, 1.00, 6),
     (2, 'Tuna Melt', 'Tuna', 0.10, 0.05, 1),
-    (3, 'Breakfast Tacos', 'Sausage', 5, 15, 3);
+    (3, 'Breakfast Tacos', 'Sausage', .5, 15, 3);
 
 -- Inserting Recipe-to-Ingredient Links
 INSERT INTO RecipeToIngredients (RecipeID, IngredientID) 

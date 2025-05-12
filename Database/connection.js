@@ -6,6 +6,13 @@ const connection = mysql.createConnection({
     password: 'gggggggg',  
     database: 'HW2'
 });
+console.log("DB config:", {
+    host: connection.config.host,
+    user: connection.config.user,
+    password: connection.config.password,
+    database: connection.config.database
+});
+
 
 connection.connect((err) => {
     if (err) {

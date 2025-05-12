@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <title>Add a Recipe</title>
+    <link rel="stylesheet" href="/add.css">
 </head>
 <body>
-    <h1>Add a New Recipe</h1>
-    <form action="/add" method="POST">
-        <label for="RecipeName">Recipe Name:</label>
-        <input type="text" id="RecipeName" name="RecipeName" required><br>
+    <div class="container">
+        <h1>Add a New Recipe</h1>
 
-        <label for="Protein">Protein:</label>
-        <select id="Protein" name="Protein">
-            <option value="Chicken">Chicken</option>
-            <option value="Beef">Beef</option>
-            <option value="Tofu">Tofu</option>
-            <option value="Grains">Grains</option>
-        </select><br>
+        <!-- Ensure form method and action are correctly defined -->
+        <form method="POST" action="/add">
+            <label for="RecipeName">Recipe Name:</label>
+            <input type="text" id="RecipeName" name="RecipeName" placeholder="e.g., Chicken Alfredo" required>
 
-        <label for="PrepTime">Prep Time (mins):</label>
-        <input type="number" id="PrepTime" name="PrepTime" required><br>
+            <label for="Protein">Protein Type:</label>
+            <input type="text" id="Protein" name="Protein" placeholder="e.g., Chicken" required>
 
-        <label for="CookTime">Cook Time (mins):</label>
-        <input type="number" id="CookTime" name="CookTime" required><br>
+            <label for="PrepTime">Prep Time (minutes):</label>
+            <input type="number" id="PrepTime" name="PrepTime" required>
 
-        <label for="Servings">Servings:</label>
-        <input type="number" id="Servings" name="Servings" required><br>
+            <label for="CookTime">Cook Time (minutes):</label>
+            <input type="number" id="CookTime" name="CookTime" required>
 
-        <h3>Select Ingredients:</h3>
-        <% ingredients.forEach(ingredient => { %>
-            <input type="checkbox" name="IngredientIDs" value="<%= ingredient.IngredientID %>">
-            <label><%= ingredient.IngredientName %></label><br>
-        <% }); %>
+            <label for="Servings">Servings:</label>
+            <input type="number" id="Servings" name="Servings" required>
 
-        <button type="submit">Add Recipe</button>
-    </form>
+            <h3>Select Ingredients:</h3>
+            <% ingredients.forEach(ingredient => { %>
+                <div class="ingredient-checkbox">
+                    <input type="checkbox" name="IngredientIDs[]" value="<%= ingredient.IngredientID %>">
+                    <label><%= ingredient.IngredientName %></label>
+                </div>
+            <% }); %>
+            <input type="submit" value="Add Recipe">
+        </form>
 
-    <a href="/">Back to Home</a>
+        <div style="margin-top: 20px;">
+            <a href="/" class="btn-home">← Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>

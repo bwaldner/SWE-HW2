@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/styles.css">
+    <title><%= recipe.RecipeName %></title>
+    <link rel="stylesheet" href="/recipe.css">
 </head>
 <body>
-    <h1><%= recipe.RecipeName %></h1>
-    <p><strong>Protein:</strong> <%= recipe.Protein %></p>
-    <p><strong>Prep Time:</strong> <%= recipe.PrepTime %> mins</p>
-    <p><strong>Cook Time:</strong> <%= recipe.CookTime %> mins</p>
-    <p><strong>Servings:</strong> <%= recipe.Servings %></p>
+    <div class="container">
+        <a href="/recipes">← Back to Recipes</a>
+        <div class="recipe-card">
+            <h3><%= recipe.RecipeName %></h3>
+            <p><strong>Protein:</strong> <%= recipe.Protein %></p>
+            <p><strong>Prep Time:</strong> <%= recipe.PrepTime %> hrs</p>
+            <p><strong>Cook Time:</strong> <%= recipe.CookTime %> hrs</p>
+            <p><strong>Servings:</strong> <%= recipe.Servings %></p>
 
-    <h2>Ingredients</h2>
-    <div class="ingredient-container">
-        <% ingredients.forEach(ingredient => { %>
-            <div class="hover-box">
-                <%= ingredient.IngredientName %>
-                <div class="popup"><%= ingredient.Info %></div>
-            </div>
-        <% }); %>
+            <h4>Ingredients:</h4>
+            <ul>
+                <% ingredients.forEach(ingredient => { %>
+                    <li><%= ingredient.IngredientName %>: <%= ingredient.Info %></li>
+                <% }) %>
+            </ul>
+        </div>
     </div>
-
-    <br>
-    <a href="/recipes">Back to Recipes</a>
 </body>
 </html>

@@ -3,11 +3,11 @@ const router = express.Router();
 
 // Define routes
 router.get('/', (req, res) => {
-    //res.send('Welcome to the index page!');
-    res.render('index', { 
-         title: 'Home Page', 
-    favoriteFood: 'Mac and Cheese', 
-    cookingStyle: 'I love making filling homestyle dishes that make you feel warm and happy!' });
+    res.render('index', {
+        title: 'Home',
+        favoriteFood: 'Mac and cheese',
+        cookingExperience: 'I love making homestyle dishes with lots of flavor and nutrients.'
+    });
 });
 
 // Export the router properly

@@ -51,7 +51,8 @@ router.get('/:id', (req, res) => {
             res.render('recipe', {
                 title: recipeResults[0].RecipeName,
                 recipe: recipeResults[0],
-                ingredients: ingredientResults
+                ingredients: ingredientResults,
+                searchQuery: '' // 👈 Add this to fix the EJS error
             });
         });
     });

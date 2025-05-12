@@ -2,16 +2,19 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Ben Waldner's Favorite Recipes!</h1>
-    <p><strong>Favorite Food:</strong> <%= favoriteFood %></p>
-    <p><strong>Cooking Style:</strong> <%= cookingStyle %></p>
+    <div class="container">
+        <h1>Ben Waldner's Favorite Recipes!</h1>
+        <p><strong>Favorite Food:</strong> <%= favoriteFood %></p>
+        <p><strong>Cooking Experience:</strong> <%= cookingExperience %></p>
 
-    <h2>Navigation</h2>
-    <ul>
-        <li><a href="/recipes">View Recipes</a></li>
-        <li><a href="/add">Add a Recipe</a></li>
-    </ul>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="/recipes">View Recipes</a></li>
+            <li><a href="/add">Add a Recipe</a></li>
+        </ul>
+    </div>
 </body>
 </html>
